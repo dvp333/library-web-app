@@ -10,7 +10,7 @@ class AddBook extends Component {
         this.state = {
             name: '',
             genre: '',
-            authorId: ''
+            authorId: '-1'
         }
     }
 
@@ -49,6 +49,7 @@ class AddBook extends Component {
                 <div className="field">
                     <label>Author:</label>
                     <select  onChange={(e) => this.setState({authorId: e.target.value})}>
+                        <option value="-1">Select author</option>
                         {this.displayAuthors()}
                     </select>
                 </div>
